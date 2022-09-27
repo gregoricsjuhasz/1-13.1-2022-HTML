@@ -12,34 +12,95 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
+        <style>
+            table{
+                border: solid 2px black;
+                background-color: aqua; 
+                border-radius: 10px;
+                padding: 10;
+                border-style: groove; 
+                width: 800px;
+            }
+
+            td, th{
+                border: solid 1px;
+            }
+
+            th{
+                text-align: left;
+            }
+
+            td{
+                padding-top: 5px;
+                padding-right: 10px;
+                padding-bottom: 15px;
+                padding-right: 5px;
+
+            }
+
+            #kiemelt{
+                background-color: red;
+                visibility: collapse;
+            }
+
+            .bekezdések{
+                color: blue;
+            }
+
+            .fontos{
+                font-weight: bold;
+                font-style: italic;
+                color: green;
+            }
+
+        </style>
     </head>
     <body>
         <h1>Táblázat gyakorlás</h1>
 
-        <table style="border: solid 2px black; background-color: aqua; border-radius: 10px; padding: 10;border-style: groove; width: 800px;">
+        <table>
 
-            <tr style="height: 100px;">
+            <tr>
+                <colgroup>
+                    <col span="3">
+                    <col span="2" id="kiemelt">
+                </colgroup>
                 <th>1. fejléc</th>
-                <th>2. fejléc</th>
+                <th colspan="2">2. fejléc</th>
                 <th>3. fejléc</th>
                 <th>4. fejléc</th>
-                <th>5. fejléc</th>
                 
             </th>
             <tr>
-                <th>1. sor</th>
+                <th rowspan="2">1. sor</th>
                 <td>2. mező</td>
                 <td>3. mező</td>
                 <td>4. mező</td>
                 <td>5. mező</td>
             <tr>
-                <th>2. sor</th>
+                
+                <td>2. mező</td>
+                <td>3. mező</td>
+                <td>4. mező</td>
+                <td>5. mező</td>
+            </tr>
+            <tr>
+                <th>3. sor</th>
                 <td>2. mező</td>
                 <td>3. mező</td>
                 <td>4. mező</td>
                 <td>5. mező</td>
             </tr>
         </table>
+        <div class="bekezdések">
+            <h2>1. bekezdés </h2>
+            <p>Lorem ipsum dolor, sit amet <span class="fontos">consectetur</span> adipisicing elit. 
+            Omnis sequi quam similique asperiores accusamus rem pariatur esse nisi fuga quos.</p>
+            <h2>2. bekezdés </h2>
+            <p>Lorem ipsum dolor sit amet, consectetur <span class="fontos">adipisicing</span> elit. 
+            Autem sunt voluptatibus id fuga soluta iste enim alias adipisci. 
+            Sequi id quisquam neque, quae temporibus voluptatum nulla eveniet cum nemo minus?</p>        
+        </div>
         <script src="" async defer></script>
     </body>
 </html>
