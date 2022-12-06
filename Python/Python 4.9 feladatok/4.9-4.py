@@ -3,7 +3,7 @@ a = turtle.Screen()
 a.bgcolor("lightgreen")
 Eszti = turtle.Turtle()
 Eszti.pensize(4)
-Eszti.color("pink")
+Eszti.color("blue")
 Eszti.speed(15)
 
 def minta(t, h):
